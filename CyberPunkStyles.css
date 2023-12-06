@@ -60,6 +60,10 @@ html, body {
   font-family: var(--font-primary);
 }
 
+p {
+  margin: 4px 0;
+}
+
 body {
   position: relative;
   /* backdrop-filter: grayscale(100%); */
@@ -206,6 +210,7 @@ header {
   transition: background-color 1s linear;
 }
 
+
 section {
   line-height: 1.5;
   position: relative;
@@ -291,8 +296,53 @@ nav ul li a::after {
   color: white;
 }
 
+/* Button Styles */
+button {
+  border-style: solid;
+  border-width: 2px;
+  overflow: hidden;
+  position: relative;
+  padding: 6px 10px;
+  border-color: var(--blue);
+  background-color: var(--blue);
+  color: white;
+  text-transform: uppercase;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
 
+button:hover {
+  background-color: transparent;
+  color: var(--blue);
+  transition: background-color 500ms ease-in-out;
+}
 
+button.danger {
+  background-color: red;
+  border-color: red;
+}
+
+button.danger:hover {
+  background-color: transparent;
+  color: red;
+  transition: background-color 500ms ease-in-out;
+}
+
+button.success {
+  background-color: green;
+  border-color: green;
+}
+
+button.success:hover {
+  background-color: transparent;
+  color: green;
+  transition: background-color 500ms ease-in-out;
+}
+
+/* Link Styles */
 
 
 .glitch {
