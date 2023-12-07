@@ -35,8 +35,20 @@
   --black-hover-background: rgba(0,0,0,0.25);
 
   --title-text-shadow: rgb(0, 208, 255) 2px 3px 0px;
-  --yellow: #f7f500;
+  --color-info: #f7f500;
   --blue: rgb(0, 208, 255);
+
+  --color-primary: rgb(0, 208, 255);
+  --color-background: 120458;
+  --color-dark: #383e65;
+  --color-light: #ff00a0;
+  --color-md-light: rgb(179, 170, 170);
+  --color-md-dark: rgb(82, 101, 101);
+  --color-info: #f7f500;
+  --color-success: rgb(0, 255, 0);
+  --color-danger: rgb(255, 0, 0);
+  --color-callout: rgb(255, 0, 255);
+
 }
 
 * {
@@ -74,8 +86,34 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-  color: var(--yellow);
+  color: var(--color-info);
   letter-spacing: 2px;
+  margin: 4px 0;
+
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
 }
 
 .wrapper {
@@ -123,7 +161,7 @@ header {
 .title {
   font-family: var(--font-title);
   font-size: clamp(5rem, 7vw, 6rem);
-  color: var(--yellow);
+  color: var(--color-info);
   text-shadow: var(--title-text-shadow)
 }
 
@@ -160,7 +198,7 @@ header {
   font-weight: 700;
   text-decoration: none;
   font-size: 1.1rem;
-  color: var(--yellow);
+  color: var(--color-info);
 }
 
 .navbar ul li {
@@ -247,7 +285,7 @@ pre {
   background: rgba(82,101,101,.3);
   border-top: 2px solid rgba(102, 97, 97, 0.9);
   border-bottom: 2px solid rgba(102, 97, 97, 0.9);
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 pre code {
@@ -273,7 +311,7 @@ nav ul {
   list-style: none;
   background-color: rgba(0,0,0, 0.6);
   padding: 10px 2rem;
-  border: 2px solid var(--yellow);
+  border: 2px solid var(--color-info);
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -343,7 +381,81 @@ button.success:hover {
 }
 
 /* Link Styles */
+a {
+  color: var(--blue);
+  text-decoration: none;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+/* Forms and Controls */
+form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid var(--blue);
+  padding: 1rem;
+  margin: 1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  padding: 6px 10px;
+  border: 2px solid var(--blue);
+  background-color: transparent;
+  color: white;
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+}
+
+.control-checkbox {
+  flex-direction: row;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+textarea {
+  padding: 6px 10px;
+  border: 2px solid var(--blue);
+  background-color: transparent;
+  color: white;
+  font-family: var(--font-primary);
+  letter-spacing: 2px;
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+
+
+
+
+.color-grid div {
+  padding: 8px;
+  width: 48%;
+}
 
 .glitch {
   font-weight: 700;
