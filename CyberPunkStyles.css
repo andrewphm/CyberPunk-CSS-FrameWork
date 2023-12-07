@@ -1,4 +1,3 @@
-/* import font from './fonts/Cynatar.otf */
 @font-face {
   font-family: 'Cynatar';
   src: url('./fonts/Cynatar.otf') format('opentype');
@@ -26,17 +25,12 @@
 }
 
 :root {
-  /* fonts */
   --font-title: 'Cynatar', sans-serif;
   --font-primary: 'Orbitron', sans-serif;
   --font-heading: 'Valorax', sans-serif;
 
-
   --black-hover-background: rgba(0,0,0,0.25);
-
   --title-text-shadow: rgb(0, 208, 255) 2px 3px 0px;
-  --color-info: #f7f500;
-  --blue: rgb(0, 208, 255);
 
   --color-primary: rgb(0, 208, 255);
   --color-background: 120458;
@@ -48,7 +42,6 @@
   --color-success: rgb(0, 255, 0);
   --color-danger: rgb(255, 0, 0);
   --color-callout: rgb(255, 0, 255);
-
 }
 
 * {
@@ -78,7 +71,6 @@ p {
 
 body {
   position: relative;
-  /* backdrop-filter: grayscale(100%); */
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -118,14 +110,11 @@ h6 {
 
 .wrapper {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url('./images/bg.jpg');
-  /* background: url('./images/bg.jpg'); */
-  /* filter: brightness(0.4) blur(0px); */
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   max-height: 100vh;
   max-width: 100vw;
-
   overflow:hidden;
 }
 
@@ -146,7 +135,6 @@ aside {
   row-gap: 3rem;
   scroll-behavior: smooth;
 }
-
 
 /* Header Styles */
 header {
@@ -170,8 +158,8 @@ header {
   font-size: clamp(1.1rem, 1vw, 1.5rem);
   color: rgb(0, 208, 255);
   position: absolute;
-  right: 1.2rem;
-  bottom: -25;
+  right: 0;
+  bottom: -40px;
   text-shadow: none;
 }
 
@@ -202,23 +190,21 @@ header {
 }
 
 .navbar ul li {
-  /* border  */
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
-  /* clip-path: polygon(100% 0%, 100% 60%, 93% 100%, 0% 100%, 0% 0%); */
   overflow: hidden;
   position: relative;
   padding: 6px;
-  border-color: var(--blue);
+  border-color: var(--color-primary);
   border-color:transparent;
 }
 
 .navbar ul li:hover,
 .navbar ul li:hover a,
 .navbar ul li:hover::after {
-  border-color: var(--blue);
-  color: var(--blue);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
   transition: border-color 1s linear;
 }
 
@@ -227,7 +213,7 @@ header {
 }
 
 .navbar ul li:hover a {
-  color: var(--blue);
+  color: var(--color-primary);
 }
 
 .navbar ul li::after {
@@ -236,27 +222,24 @@ header {
   height: 25px;
   position: absolute;
   background-color: transparent;
-  /* border: 2px solid var(--blue); */
   bottom: -15px;
   transform: rotate(45deg);
   right: -15px;
 }
 
 .navbar ul li:hover::after {
-  color: var(--blue);
-  background-color: var(--blue);
+  color: var(--color-primary);
+  background-color: var(--color-primary);
   transition: background-color 1s linear;
 }
-
 
 section {
   line-height: 1.5;
   position: relative;
   padding: 25px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--color-primary);
   color: white;
 }
-
 
 .section-heading {
   font-family: var(--font-heading);
@@ -270,18 +253,15 @@ section {
 .section-heading::before {
   left: -5px;
   position: relative;
-  color: var(--blue);
+  color: var(--color-primary);
   display: inline-block;
   content: ">>";
   font-family: var(--font-primary);
 }
 
 pre {
-  /* background-color: aliceblue; */
-  /* backdrop-filter: blur(10px); */
   color: white;
   background-color: rgba(82,101,101,.3);
-  /* background: linear-gradient(45deg,rgba(82,101,101,.3),rgba(17,21,21,.1)); */
   background: rgba(82,101,101,.3);
   border-top: 2px solid rgba(102, 97, 97, 0.9);
   border-bottom: 2px solid rgba(102, 97, 97, 0.9);
@@ -295,7 +275,6 @@ pre code {
 
 
 /* Navbar Styles */
-
 nav {
   width: 100%;
   display: flex;
@@ -341,8 +320,8 @@ button {
   overflow: hidden;
   position: relative;
   padding: 6px 10px;
-  border-color: var(--blue);
-  background-color: var(--blue);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
   color: white;
   text-transform: uppercase;
   font-family: var(--font-primary);
@@ -354,7 +333,7 @@ button {
 
 button:hover {
   background-color: transparent;
-  color: var(--blue);
+  color: var(--color-primary);
   transition: background-color 500ms ease-in-out;
 }
 
@@ -382,7 +361,7 @@ button.success:hover {
 
 /* Link Styles */
 a {
-  color: var(--blue);
+  color: var(--color-primary);
   text-decoration: none;
   font-family: var(--font-primary);
   font-weight: 700;
@@ -396,7 +375,7 @@ form {
   flex-direction: column;
   row-gap: 1rem;
   background: rgba(0, 0, 0, 0.9);
-  border: 2px solid var(--blue);
+  border: 2px solid var(--color-primary);
   padding: 1rem;
   margin: 1rem;
 }
@@ -413,7 +392,7 @@ input:focus {
 
 input {
   padding: 6px 10px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--color-primary);
   background-color: transparent;
   color: white;
   font-family: var(--font-primary);
@@ -428,7 +407,7 @@ input {
 
 textarea {
   padding: 6px 10px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--color-primary);
   background-color: transparent;
   color: white;
   font-family: var(--font-primary);
@@ -448,10 +427,6 @@ footer ul {
   row-gap: 1rem;
 }
 
-
-
-
-
 .color-grid div {
   padding: 8px;
   width: 48%;
@@ -459,9 +434,6 @@ footer ul {
 
 .glitch {
   font-weight: 700;
-  /* text-transform: uppercase; */
-
-
   animation: glitch 600ms infinite;
 }
 
@@ -475,7 +447,6 @@ footer ul {
   animation: glitch 650ms infinite;
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
   transform: translate(-0.025em, -0.0125em);
-  /* color: green; */
   opacity: 0.8;
 }
 
@@ -483,11 +454,8 @@ footer ul {
   animation: glitch 375ms infinite;
   clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
   transform: translate(0.0125em, 0.025em);
-  /* color: red; */
   opacity: 0.8;
 }
-
-/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
 
 @keyframes glitch {
   0% {
